@@ -8,3 +8,8 @@ require_relative 'db/connection'
 require_relative 'models/pokemon'
 
 binding.pry
+
+get "/pokemon" do
+  @pokemon = Pokemon.all
+  erb :"pokemon/index"
+end
